@@ -11,6 +11,7 @@ const ping = (url, timeout) => {
     throw new Error('Expected timeout in ms')
   }
 
+
   // make copy of the error codes that "got" retries on
   const errorCodes = [...got.defaults.options.retry.errorCodes]
   errorCodes.push('ESOCKETTIMEDOUT')
